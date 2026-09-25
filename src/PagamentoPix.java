@@ -1,4 +1,10 @@
-package PACKAGE_NAME;
-
-public class PagamentoPix {
+public class PagamentoPix extends FormaDePagamento {
+    @Override
+    public void processarPagamento() {
+        IO.println("seu pix foi realizado com sucesso!"
+                + "\n o código da operação é: "
+                + getCodigo() + "\n Data de Pagamento "
+                + getDataCriacao()
+        );
+    }
 }
